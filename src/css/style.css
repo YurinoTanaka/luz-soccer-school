@@ -97,20 +97,19 @@ h1 {
 
 #top-introduction {
   display: flex;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 8%;
+  margin-right: 8%;
+  font-size: 16px;
 }
 #top-introduction img {
-  width: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 50%;
 }
 #top-introduction p {
   margin-left: 7%;
 }
 
 #top-instagram-guidance {
-  margin-top: 5%;
+  margin-top: 10%;
 }
 #top-instagram-guidance p {
   font-weight: bold;
@@ -155,6 +154,7 @@ h1 {
 
 .top-schedule-contents {
   padding-left: 10%;
+  font-size: 16px;
 }
 
 #schedule-table1,
@@ -180,4 +180,124 @@ h1 {
 }
 #top-venue div p {
   padding: 20px 20px 20px 20px;
+}
+
+/* 入会募集 */
+#top-recruitment > img {
+  position: relative;
+  margin: auto;
+  display: block;
+  width: 85%;
+}
+
+#top-recruitment {
+  position: relative;
+}
+#top-recruitment #top-recruitment-message {
+  margin: 30px 10%;
+}
+#top-recruitment #top-recruitment-message #top-message {
+  font-size: 16px;
+}
+#top-recruitment #top-recruitment-message #top-note {
+  position: absolute;
+  right: 10%;
+  font-size: 13px;
+}
+
+#top-guidance {
+  text-align: center;
+  margin-top: 80px;
+}
+#top-guidance p {
+  font-size: 35px;
+  font-weight: bold;
+}
+#top-guidance img {
+  width: 750px;
+}
+
+#top-official {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#top-official-uzura,
+#top-official-gujo {
+  margin-top: 50px;
+}
+#top-official-uzura span,
+#top-official-gujo span {
+  font-size: 25px;
+  margin-left: 20px;
+}
+#top-official-uzura img,
+#top-official-gujo img {
+  width: 65%;
+  margin-top: 10px;
+}
+
+#top-official-uzura {
+  margin-left: 15%;
+}
+
+/* 指導メソッド/スタッフ紹介 */
+#top-methods-staff {
+  background-image: url(../images/home/home_background.jpg);
+  background-size: 100%;
+  color: #ffffff;
+}
+
+/* 指導メソッド */
+.top-methods-title {
+  padding-top: 30px;
+}
+
+#top-methods-message {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+#top-methods-message p {
+  width: 40%;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+}
+#top-methods-message img {
+  width: 25%;
+}
+
+/* スタッフ紹介 */
+#top-staff {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+#top-staff img {
+  width: 13%;
+  height: auto;
+}
+#top-staff p {
+  width: 40%;
+  margin-left: 50px;
+}
+
+#top-representative {
+  font-size: 20px;
+}
+
+#top-name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#top-name-kana {
+  font-size: 10px;
+}
+
+.button-staff {
+  padding: 5% 0;
 }/*# sourceMappingURL=style.css.map */

@@ -12,7 +12,9 @@ h1 {
 
 /* 変数 */
 $color-gold: #8f784e;
-$font-size-main: 10px;
+$font-size-main: 16px;
+$font-size-35: 35px;
+$font-size-30: 30px;
 
 /* ヘッダー */
 #wrap {
@@ -76,9 +78,6 @@ $font-size-main: 10px;
 .button {
   text-align: center;
   margin-top: 30px;
-  // position: absolute;
-  // bottom: 50px;
-  // left: 45%;
   img {
     width: 200px;
   }
@@ -92,18 +91,18 @@ $font-size-main: 10px;
 }
 #top-introduction {
   display: flex;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 8%;
+  margin-right: 8%;
+  font-size: $font-size-main;
   img {
-    width: 300px;
-    object-fit: cover
+    width: 50%;
   }
   p {
     margin-left: 7%;
   }
 }
 #top-instagram-guidance {
-  margin-top: 5%;
+  margin-top: 10%;
   p {
     font-weight: bold;
     margin-right: 5%;
@@ -143,6 +142,7 @@ $font-size-main: 10px;
 }
 .top-schedule-contents {
   padding-left: 10%;
+  font-size: $font-size-main;
 }
 #schedule-table1,
 #schedule-table2 {
@@ -164,4 +164,112 @@ $font-size-main: 10px;
       padding: 20px 20px 20px 20px;
     }
   }
+}
+
+/* 入会募集 */
+#top-recruitment > img {
+  position: relative;
+  margin: auto;
+  display: block;
+  width: 85%;
+}
+#top-recruitment {
+  position: relative;
+  #top-recruitment-message {
+    margin: 30px 10%;
+    #top-message {
+      font-size: $font-size-main;
+    }
+    #top-note {
+      position: absolute;
+      right: 10%;
+      font-size: 13px;
+    }
+  }
+}
+#top-guidance {
+  text-align: center;
+  margin-top: 80px;
+  p {
+    font-size: $font-size-35;
+    font-weight: bold;
+  }
+  img {
+    width: 750px;
+  }
+}
+#top-official {
+  display: flex;
+  justify-content: center;
+  font-size: $font-size-main;
+  font-weight: bold;
+}
+#top-official-uzura,
+#top-official-gujo {
+  margin-top: 50px;
+  span {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+  img {
+    width: 65%;
+    margin-top: 10px;
+  }
+}
+#top-official-uzura {
+  margin-left: 15%;
+}
+
+/* 指導メソッド/スタッフ紹介 */
+#top-methods-staff {
+  background-image: url(../images/home/home_background.jpg);
+  background-size: 100%;
+  color: #ffffff;
+}
+/* 指導メソッド */
+.top-methods-title {
+  padding-top: 30px;
+}
+#top-methods-message {
+  display: flex;
+  justify-content: center;
+  font-size: $font-size-main;
+  p {
+    width: 40%;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+  }
+  img {
+    width: 25%;
+  }
+}
+/* スタッフ紹介 */
+#top-staff {
+  display: flex;
+  justify-content: center;
+  font-size: $font-size-main;
+  img {
+    width: 13%;
+    height: auto;
+    // object-fit: cover;
+    // aspect-ratio: 1/1;
+  }
+  p {
+    width: 40%;
+    margin-left: 50px;
+  }
+}
+#top-representative {
+  font-size: 20px;
+}
+#top-name {
+  font-size: $font-size-30;
+  font-weight: bold;
+}
+#top-name-kana {
+  font-size: 10px;
+}
+.button-staff {
+  padding: 5% 0;
 }
