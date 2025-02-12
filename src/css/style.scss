@@ -16,6 +16,9 @@ $font-size-main: 16px;
 $font-size-35: 35px;
 $font-size-30: 30px;
 
+/* -------
+共通の編集
+--------- */
 /* ヘッダー */
 #wrap {
   display: flex;
@@ -27,7 +30,6 @@ $font-size-30: 30px;
   }
 }
 #logo {
-  width: 50%;
   margin-left: 5px;
 }
 #icons {
@@ -74,17 +76,39 @@ $font-size-30: 30px;
   width: 100%;
 }
 
+/* フッター */
+footer {
+  position: relative;
+  font-size: $font-size-main;
+}
+#footer {
+  display: flex;
+  justify-content: space-around;
+  #footer-logo {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+  }
+  .footer-access {
+    margin-top: 20%;
+  }
+}
+#copyright {
+  padding: 60px 0 20px 0;
+  text-align: center;
+}
+
+/* --------------
+トップページの編集
+--------------- */
 /* もっと見るボタンの設定 */
 .button {
   text-align: center;
   margin-top: 30px;
-  img {
-    width: 200px;
-  }
 }
 
 /* スクール紹介 */
-.top-title {
+.title {
   text-align: center;
   margin-top: 70px;
   margin-bottom: 60px;
@@ -94,21 +118,19 @@ $font-size-30: 30px;
   margin-left: 8%;
   margin-right: 8%;
   font-size: $font-size-main;
-  img {
-    width: 50%;
-  }
   p {
     margin-left: 7%;
   }
 }
 #top-instagram-guidance {
-  margin-top: 10%;
+  position: relative;
+  margin-top: 5%;
   p {
     font-weight: bold;
     margin-right: 5%;
   }
-  a {
-    margin-left: 50%;
+  div {
+    text-align: right;
   }
 }
 .top-detail-img {
@@ -206,18 +228,17 @@ $font-size-30: 30px;
 }
 #top-official-uzura,
 #top-official-gujo {
-  margin-top: 50px;
+  margin-top: 40px;
   span {
     font-size: 25px;
     margin-left: 20px;
   }
   img {
-    width: 65%;
-    margin-top: 10px;
+    padding-top: 10px;
   }
 }
 #top-official-uzura {
-  margin-left: 15%;
+  margin-right: 13%;
 }
 
 /* 指導メソッド/スタッフ紹介 */
@@ -226,6 +247,7 @@ $font-size-30: 30px;
   background-size: 100%;
   color: #ffffff;
 }
+
 /* 指導メソッド */
 .top-methods-title {
   padding-top: 30px;
@@ -240,24 +262,16 @@ $font-size-30: 30px;
     display: flex;
     align-items: center;
   }
-  img {
-    width: 25%;
-  }
 }
+
 /* スタッフ紹介 */
 #top-staff {
   display: flex;
   justify-content: center;
   font-size: $font-size-main;
-  img {
-    width: 13%;
-    height: auto;
-    // object-fit: cover;
-    // aspect-ratio: 1/1;
-  }
   p {
     width: 40%;
-    margin-left: 50px;
+    margin-left: 70px;
   }
 }
 #top-representative {
@@ -272,4 +286,75 @@ $font-size-30: 30px;
 }
 .button-staff {
   padding: 5% 0;
+}
+
+/* --------------
+スクール紹介ページの編集
+--------------- */
+
+/* スクール紹介 */
+.title-white {
+  margin-top: 0;
+  padding-top: 70px;
+  color: #ffffff;
+}
+#school-introduction {
+  background-image: url(../images/introduction/introduction_background.png);
+  color: #ffffff;
+  font-size: $font-size-main;
+}
+#school-detail {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  p {
+    padding: 50px 0 50px 40px;
+    width: 40%;
+  }
+}
+.school-detail-message {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  h2 {
+    font-size: 60px;
+    font-weight: bold;
+    color: $color-gold;
+  }
+  div {
+    width: 70%;
+    margin-left: 30px;
+    margin-top: 15px;
+    h3 {
+      font-size: $font-size-30;
+    }
+  }
+}
+.school-detail-message02 {
+  text-align: right;
+  div {
+    margin-right: 30px;
+  }
+  h2 {
+    padding-right: 25px;
+  }
+}
+.school-detail-message03 {
+  padding-bottom: 100px;
+}
+
+/* --------------
+指導メソッドページの編集
+--------------- */
+
+/* 指導メソッド */
+#methods {
+  background-color: #000000;
+  color: #ffffff;
+}
+#method-main-text {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 70px;
 }
