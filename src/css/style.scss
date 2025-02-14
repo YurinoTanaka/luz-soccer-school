@@ -132,6 +132,16 @@ footer {
     text-align: right;
   }
 }
+#top-club-partner {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: $font-size-main;
+  h2 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
 .top-detail-img {
   width: 100px;
 }
@@ -340,6 +350,163 @@ footer {
 }
 .school-detail-message03 {
   padding-bottom: 100px;
+}
+
+/* スケジュール/会費 */
+.school-schedule-fee {
+  margin-right: 20px;
+  margin-left: 20px;
+  h2 {
+    margin-left: 3%;
+    margin-bottom: 30px;
+    border-left: 4px solid $color-gold;
+    padding-left: 20px;
+  }
+  p {
+    padding-top: 20px;
+    padding-right: 4%;
+    text-align: right;
+    font-size: $font-size-main;
+  }
+}
+.school-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  width: 210px;
+  height: 250px;
+  background-color: #000000;
+  color: #ffffff;
+  outline: 1px solid $color-gold;
+  outline-offset: -10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card_textbox {
+  padding: 12%;
+  h3 {
+    background: $color-gold;
+    font-size: 18spx;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+  }
+  h4 {
+    font-size: 16px;
+    border-left: 2px solid $color-gold;
+    padding-left: 8px;
+  }
+  li {
+    list-style: none;
+    font-size: 15px;
+    span {
+      font-size: 10px;
+    }
+  }
+}
+.card_schedule {
+  padding-top: 10px;
+  padding-left: 10px;
+  li {
+    padding-left: 5px;
+  }
+}
+.card_mon_fee {
+  padding-top: 10px;
+  padding-left: 10px;
+  li {
+    padding-left: 5px;
+  }
+}
+#school-uzura {
+  margin-top: 40px;
+}
+#school-gujo {
+  margin-top: 40px;
+}
+
+/* 練習場所 */
+#school-place {
+  align-items: center;
+}
+.school-place-map {
+  display: flex;
+  justify-content: center;
+  iframe {
+    width: 450px;
+    height: 450px;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    height: 450px;
+    background-color: $color-gold;
+    font-size: 25px;
+    color: #ffffff;
+  }
+}
+.school-place-main {
+  padding-bottom: 20%;
+  font-size: $font-size-30;
+}
+.school-place-gujo {
+  flex-direction: row-reverse;
+}
+
+/* ユニフォーム */
+#uniform-bibs {
+  text-align: center;
+  background-color: $color-gold;
+  color: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#uniform-bibs-img {
+  width: 100%;
+}
+#school-original {
+  text-align: center;
+  padding-top: 50px;
+  h3 {
+    padding-bottom: 20px;
+    font-weight: bold;
+  }
+  #school-original-text {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  span {
+    color: $color-gold;
+    font-size: $font-size-30;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #8e8e8e;
+  }
+}
+
+/* お問い合わせ */
+#school-contact {
+  background-color: #000000;
+  font-size: $font-size-main;
+}
+.title-contact {
+  color: #ffffff;
+  padding-top: 40px;
+}
+#school-contact-details {
+  color: #ffffff;
+  padding-bottom: 70px;
+  #school-message {
+    font-size: $font-size-35;
+    padding-bottom: 30px;
+  }
+}
+#school-contact-details > p {
+  text-align: center;
 }
 
 /* --------------
