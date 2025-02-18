@@ -71,9 +71,6 @@ $font-size-30: 30px;
     }
   } 
 }
-#header-img {
-  width: 100%;
-}
 
 /* フッター */
 footer {
@@ -104,6 +101,14 @@ footer {
 .button {
   text-align: center;
   margin-top: 30px;
+}
+
+/* カルーセル */
+ .carousel {
+  margin: 0 auto;
+}
+.carouselImg {
+  width: 100%;
 }
 
 /* スクール紹介 */
@@ -679,3 +684,41 @@ footer {
 .circle-second {
   margin-left: 60%;
 }
+
+/* --------------
+スタッフ紹介の編集
+--------------- */
+.staff-introduction {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  font-size: $font-size-main;
+  border-bottom: 3px solid $color-gold;
+  padding-bottom: 40px;
+  img {
+    padding-top: 20px;
+  }
+}
+.staff-introduction-main {
+  padding-left: 60px;
+  .history-message {
+    background-color: $color-gold;
+    color: #ffffff;
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+    padding: 2px 0;
+    margin: 10px 0 5px 0;
+  }
+  .staff-history {
+    padding-left: 25px;
+  }
+}
+.staff-introduction-end {
+  padding: 30px 0 70px 0;
+  border-bottom: 0;
+}
+
+/* ---------------------------
+　　　　レスポンシブ対応
+---------------------------- */

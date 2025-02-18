@@ -6,6 +6,9 @@
     <title>Luz soccer school</title>
     <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- slickの読み込み -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- GoogleFont読み込み -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,9 +45,22 @@
           </ul>
         </nav>
       </div>
-      <img id="header-img" src="images/home/header_1.jpg" alt="スクールの様子">
     </header>
     <main>
+      <!-- カルーセル -->
+      <section id="carousel-section">
+       <div class="carousel">
+          <div>
+            <img class="carouselImg" src="images/home/header_1.png" alt="スクールの様子">
+          </div>
+          <div>
+            <img class="carouselImg" src="images/home/header_2.png" alt="スクールの様子">
+          </div>
+          <div>
+            <img class="carouselImg" src="images/home/header_3.png" alt="スクールの様子">
+          </div>
+       </div>
+      </section>
       <!-- スクール紹介 -->
       <section id="top-school">
         <div class="title">
@@ -237,5 +253,10 @@
       </div>
       <p id="copyright">&copy;2025 Luz soccer school</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- slickの読み込み -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

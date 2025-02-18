@@ -750,4 +750,40 @@ footer {
 
 .circle-second {
   margin-left: 60%;
+}
+
+/* --------------
+スタッフ紹介の編集
+--------------- */
+.staff-introduction {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  font-size: 16px;
+  border-bottom: 3px solid #8f784e;
+  padding-bottom: 40px;
+}
+.staff-introduction img {
+  padding-top: 20px;
+}
+
+.staff-introduction-main {
+  padding-left: 60px;
+}
+.staff-introduction-main .history-message {
+  background-color: #8f784e;
+  color: #ffffff;
+  border-radius: 20px;
+  width: 100px;
+  text-align: center;
+  padding: 2px 0;
+  margin: 10px 0 5px 0;
+}
+.staff-introduction-main .staff-history {
+  padding-left: 25px;
+}
+
+.staff-introduction-end {
+  padding: 30px 0 70px 0;
+  border-bottom: 0;
 }/*# sourceMappingURL=style.css.map */
