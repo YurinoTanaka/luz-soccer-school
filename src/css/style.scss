@@ -12,6 +12,7 @@ h1 {
 /* 変数 */
 $color-gold: #8f784e;
 $font-size-main: 16px;
+$font-size-main-sp: 12px;
 $font-size-35: 35px;
 $font-size-30: 30px;
 
@@ -24,15 +25,11 @@ $font-size-30: 30px;
   justify-content: space-between;
   width: 100%;
   padding: 5px 0;
-  div {
-    display: inline-block;
-  }
 }
 #logo {
   margin-left: 5px;
 }
 #icons {
-  display: inline-block;
   align-self: center;
   margin-right: 10px;
   margin-top: 15px;
@@ -71,6 +68,10 @@ $font-size-30: 30px;
     }
   } 
 }
+/* スマホ用ナビを非表示 */
+#nav-sp, #menu-sp {
+  display: none;
+}
 
 /* フッター */
 footer {
@@ -104,11 +105,13 @@ footer {
 }
 
 /* カルーセル */
- .carousel {
-  margin: 0 auto;
+#carousel-section {
+  overflow: hidden;
 }
-.carouselImg {
+.carouselImg img {
+  overflow: hidden;
   width: 100%;
+  margin: 0 auto;
 }
 
 /* スクール紹介 */
@@ -122,6 +125,7 @@ footer {
   margin-left: 8%;
   margin-right: 8%;
   font-size: $font-size-main;
+  align-items: flex-start;
   p {
     margin-left: 7%;
   }
@@ -154,7 +158,7 @@ footer {
   margin-top: 50px;
   width: 100%;
   height: 700px;
-  background-image: url(../images/home/introduction_background.jpg);
+  background-image: url(../images/home/introduction_background.png);
   background-size: 100%;
   color: #ffffff;
   position: relative;
@@ -231,7 +235,7 @@ footer {
     font-weight: bold;
   }
   img {
-    width: 750px;
+    width: 60%;
   }
 }
 #top-official {
@@ -722,3 +726,137 @@ footer {
 /* ---------------------------
 　　　　レスポンシブ対応
 ---------------------------- */
+
+@media screen and (max-width: 767px) {
+
+  /* ---------
+    共通の編集
+  ---------- */
+
+  /* ヘッダーの編集 */
+  #logo {
+    width: 50px;
+  }
+  /* PC用ナビゲーション非表示 */
+  .nav-pc {
+    display: none;
+  }
+  /* ハンバーガーメニュー */
+  #menu-sp {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 20px 10px 0 0;
+  }
+  /* スマホ用ナビゲーションの表示切替*/
+  /* 初期状態、レイアウトと非表示設定 */
+  #nav-sp {
+    background-color: $color-gold;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 100;
+    ul {
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+    li {
+      list-style: none;
+    }
+  }
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  #nav-sp nav a {
+    display: block;
+    color: #ffffff;
+  }
+  #nav-sp nav a:hover {
+    text-decoration: underline;
+  }
+  .menu {
+    text-decoration: none;
+    margin: 0 20px;
+    height: 40px;
+    font-size: $font-size-main;
+    background-image: url("../images/common/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+  #sns{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  /* タイトル */
+  .title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    h1 {
+      font-size: $font-size-30;
+    }
+    img {
+      width: 250px;
+    }
+  }
+
+  /* ---------
+    トップページの編集
+  ---------- */
+
+  /* スクール紹介の編集 */
+  #top-introduction {
+    flex-direction: column;
+    font-size: $font-size-main-sp;
+    p {
+      margin: 0 auto;
+    }
+  }
+  #top-introduction > div > p {
+    padding-top: 30px;
+  }
+  #top-introduction > img {
+    margin: 0 auto;
+    width: 65%;
+  }
+  #top-instagram-guidance > div > a > img {
+    width: 30%;
+  }
+  #top-club-partner {
+    font-size: $font-size-main-sp;
+    width: 90%;
+    margin: 0 auto;
+    h2 {
+      font-size: 20px;
+    }
+  }
+  #top-detail {
+    background: url(../images/home/introduction_background.png) no-repeat center /contain;
+    background-color: #000000;
+  }
+  #top-schedule-venue {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .top-schedule-contents {
+    font-size: $font-size-main-sp;
+    padding-left: 15px;
+  }
+  #top-venue {
+    margin-left: 3%;
+  }
+  #top-schedule > h2,
+  #top-venue > h2 {
+    font-size: 20px;
+  }
+}

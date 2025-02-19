@@ -23,8 +23,8 @@
             <img id="logo" src="images/common/logo.png" alt="トップページに戻る">
           </a>
         </div>
-        <div id="icons">
-          <img id="tel" src="images/common/tel.jpg" alt="電話">
+        <div class="nav-pc" id="icons">
+          <img id="tel" src="images/common/tel.png" alt="電話">
           <a href="https://www.instagram.com/luzsoccerschool?igsh=MW5qcmZwMDF1d2tiYw%3D%3D&utm_source=qr">
             <img id="header-icon-instagram" src="images/common/instagram_logo.png" alt="instagram">
           </a>
@@ -34,7 +34,8 @@
         </div>
       </div>
       <div>
-        <nav>
+        <!-- PC用ナビゲーション -->
+        <nav class="nav-pc">
           <ul id="nav">
             <li><a href="index.html">ホーム</a></li>
             <li><a href="school.html">スクール紹介</a></li>
@@ -44,20 +45,49 @@
             <li><a href="index.html#top-guidance">体験の申し込み</a></li>
           </ul>
         </nav>
+        <!-- スマホ用メニューボタン -->
+        <button id="menu-sp" onclick="document.getElementById('nav-sp').style.display = 'block'">
+          <img src="images/common/hamburger.png" alt="ナビゲーションを開く">
+        </button>
+        <!-- スマホ用ナビゲーション -->
+         <div id="nav-sp">
+            <button id="close" onclick="document.getElementById('nav-sp').style.display = 'none'">
+              <img src="images/common/close.png" alt="ナビゲーションを閉じる">
+            </button>
+            <nav>
+              <ul>
+                <li><a class="menu" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'">ホーム</a></li>
+                <li><a class="menu" href="school.html" onclick="document.getElementById('nav-sp').style.display = 'none'">スクール紹介</a></li>
+                <li><a class="menu" href="class.html" onclick="document.getElementById('nav-sp').style.display = 'none'">クラス紹介</a></li>
+                <li><a class="menu" href="method.html" onclick="document.getElementById('nav-sp').style.display = 'none'">指導メソッド</a></li>
+                <li><a class="menu" href="staff.html" onclick="document.getElementById('nav-sp').style.display = 'none'">スタッフ紹介</a></li>
+                <li><a class="menu" href="index.html#top-guidance" onclick="document.getElementById('nav-sp').style.display = 'none'">体験の申し込み</a></li>
+              </ul>
+            </nav>
+            <div id="sns">
+              <img id="tel" src="images/common/tel.png" alt="電話">
+              <a href="https://www.instagram.com/luzsoccerschool?igsh=MW5qcmZwMDF1d2tiYw%3D%3D&utm_source=qr">
+                <img id="header-icon-instagram" src="images/common/instagram_logo.png" alt="instagram">
+              </a>
+              <a href="index.html#top-official">
+                <img id="header-icon-line" src="images/common/icons8-line-100.png" alt="line">
+              </a>
+            </div>
+         </div>
       </div>
     </header>
     <main>
       <!-- カルーセル -->
       <section id="carousel-section">
        <div class="carousel">
-          <div>
-            <img class="carouselImg" src="images/home/header_1.png" alt="スクールの様子">
+          <div class="carouselImg">
+            <img src="images/home/header_1.png" alt="スクールの様子">
           </div>
-          <div>
-            <img class="carouselImg" src="images/home/header_2.png" alt="スクールの様子">
+          <div class="carouselImg">
+            <img src="images/home/header_2.png" alt="スクールの様子">
           </div>
-          <div>
-            <img class="carouselImg" src="images/home/header_3.png" alt="スクールの様子">
+          <div class="carouselImg">
+            <img src="images/home/header_3.png" alt="スクールの様子">
           </div>
        </div>
       </section>
@@ -69,9 +99,9 @@
         </div>
         <div>
           <div id="top-introduction">
-            <div>
+            <!-- <div id="sp-play-img"> -->
               <img src="images/home/play_image.png" alt="サッカーをしている様子">
-            </div>
+            <!-- </div> -->
             <div>
               <p>Luz(ルース)とはスペイン語で「光・輝く」の意味。<br>サッカーの楽しさはもちろん、選手自らが考えてプレーすることを大切にし、Jリーグクラブでの10年以上の指導経験を生かして個人の能力を最大限に引き出す指導を目指します。<br>サッカーを通して技術指導だけではなく、子供たちの自立心、協調性、マナー、コミュニケーション能力等の人間性も併せて育成します。</p>
               <div id="top-instagram-guidance">
@@ -139,7 +169,7 @@
             </div>
             <div id="top-venue">
               <h2>練習場所</h2>
-              <div class="top-schedule-contens">
+              <div class="top-schedule-contents">
                 <div>
                   <img class="top-detail-img" src="images/home/uzura.png" alt="鶉校">
                   <p>WHISTLE SECOND COURT</p>
@@ -163,7 +193,7 @@
       <section id="top-recruitment">
         <div class="title">
           <h1>新メンバー随時募集中です!</h1>
-          <img class="title_underline" src="images/common/line_long.png" alt="">
+          <img src="images/common/line_long.png" alt="">
         </div>
         <img src="images/home/recruitment_image.jpg" alt="生徒たち">
         <div id="top-recruitment-message">
