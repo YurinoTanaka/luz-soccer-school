@@ -4,10 +4,6 @@ body {
   background-color: #f3f3f3;
   font-family: "Noto Sans JP", serif;
 }
-h1 {
-  font-size: 50px;
-  font-weight: bold;
-}
 
 /* 変数 */
 $color-gold: #8f784e;
@@ -20,36 +16,36 @@ $font-size-30: 30px;
 共通の編集
 --------- */
 /* ヘッダー */
-#wrap {
+.wrap {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 5px 0;
 }
-#logo {
+.logo {
   margin-left: 5px;
 }
-#icons {
+.icons {
   align-self: center;
   margin-right: 10px;
   margin-top: 15px;
+  a {
+    text-decoration: none;
+  }
 }
-#icons > a {
-  text-decoration: none;
-}
-#tel {
+.tel {
   width: 120px;
   margin-bottom: 13px;
   margin-right: 5px;
 }
-#header-icon-instagram {
+.header-icon-instagram {
   width: 43px;
   margin-bottom: 3px;
 }
-#header-icon-line {
+.header-icon-line {
   width: 50px;
 }
-#nav {
+.nav {
   display: flex;
   justify-content: space-around;
   background-color: $color-gold;
@@ -69,8 +65,34 @@ $font-size-30: 30px;
   } 
 }
 /* スマホ用ナビを非表示 */
-#nav-sp, #menu-sp {
+#nav-sp, .menu-sp {
   display: none;
+}
+
+/* トップに戻るボタン */
+.backToTop {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 20px;
+  bottom: 20px;
+  width: 80px;
+  height: 80px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background: $color-gold;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+  z-index: 100;
+}
+.is-active {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* フッター */
@@ -78,10 +100,10 @@ footer {
   position: relative;
   font-size: $font-size-main;
 }
-#footer {
+.footer {
   display: flex;
   justify-content: space-around;
-  #footer-logo {
+  .footer-logo {
     position: absolute;
     top: 20px;
     left: 10px;
@@ -90,9 +112,10 @@ footer {
     margin-top: 20%;
   }
 }
-#copyright {
+.copyright {
   padding: 60px 0 20px 0;
   text-align: center;
+  font-size: 10px;
 }
 
 /* --------------
@@ -102,14 +125,14 @@ footer {
 .button {
   text-align: center;
   margin-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* カルーセル */
-#carousel-section {
+.carousel-section {
   overflow: hidden;
 }
 .carouselImg img {
-  overflow: hidden;
   width: 100%;
   margin: 0 auto;
 }
@@ -119,8 +142,12 @@ footer {
   text-align: center;
   margin-top: 70px;
   margin-bottom: 60px;
+  h2 {
+    font-size: 50px;
+    font-weight: bold;
+  }
 }
-#top-introduction {
+.top-introduction {
   display: flex;
   margin-left: 8%;
   margin-right: 8%;
@@ -130,7 +157,7 @@ footer {
     margin-left: 7%;
   }
 }
-#top-instagram-guidance {
+.top-instagram-guidance {
   position: relative;
   margin-top: 5%;
   p {
@@ -141,41 +168,54 @@ footer {
     text-align: right;
   }
 }
-#top-club-partner {
+.top-club-partner {
   display: flex;
   justify-content: center;
   padding-top: 50px;
   font-size: $font-size-main;
-  h2 {
+  h3 {
+    font-size: 25px;
     text-align: center;
     padding-bottom: 10px;
   }
 }
-.top-detail-img {
+.top-detail-title {
   width: 100px;
+  background-color: $color-gold;
+  border-radius: 15px;
+  color: #ffffff;
+  padding: 1px 0;
+  h4 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+  }
 }
-#top-detail {
+.top-detail {
   margin-top: 50px;
   width: 100%;
-  height: 700px;
   background-image: url(../images/home/introduction_background.png);
-  background-size: 100%;
+  background-size: cover;
   color: #ffffff;
   position: relative;
 }
-#top-schedule-venue {
+.top-schedule-venue {
   display: flex;
   justify-content: space-around;
-  padding-top: 50px;
-  #top-schedule {
+  padding-top: 40px;
+  .top-schedule {
     margin-left: 3%;
     div {
       margin-top: 20px;
     }
   }
 }
-#top-schedule > h2::after,
-#top-venue > h2::after {
+.top-schedule > h3,
+.top-venue > h3 {
+  font-size: 25px;
+}
+.top-schedule > h3::after,
+.top-venue > h3::after {
   content: url("../images/home/line.png");
   display: inline-block;
   transform: scale(0.7);
@@ -184,8 +224,8 @@ footer {
   padding-left: 10%;
   font-size: $font-size-main;
 }
-#schedule-table1,
-#schedule-table2 {
+.schedule-table1,
+.schedule-table2 {
   white-space: nowrap;
   padding: 10px 0px 20px 20px;
 }
@@ -196,7 +236,7 @@ footer {
 .top-cell {
   padding: 10px 0;
 }
-#top-venue {
+.top-venue {
   margin-right: 7%;  
   div {
     margin-top: 20px;
@@ -215,12 +255,12 @@ footer {
 }
 #top-recruitment {
   position: relative;
-  #top-recruitment-message {
+  .top-recruitment-message {
     margin: 30px 10%;
-    #top-message {
+    .top-message {
       font-size: $font-size-main;
     }
-    #top-note {
+    .top-note {
       position: absolute;
       right: 10%;
       font-size: 13px;
@@ -235,17 +275,18 @@ footer {
     font-weight: bold;
   }
   img {
-    width: 60%;
+    width: 70%;
+    padding-top: 10px;
   }
 }
-#top-official {
+.top-official {
   display: flex;
   justify-content: center;
   font-size: $font-size-main;
   font-weight: bold;
 }
-#top-official-uzura,
-#top-official-gujo {
+.top-official-uzura,
+.top-official-gujo {
   margin-top: 40px;
   span {
     font-size: 25px;
@@ -255,7 +296,7 @@ footer {
     padding-top: 10px;
   }
 }
-#top-official-uzura {
+.top-official-uzura {
   margin-right: 13%;
 }
 
@@ -270,7 +311,7 @@ footer {
 .top-methods-title {
   padding-top: 30px;
 }
-#top-methods-message {
+.top-methods-message {
   display: flex;
   justify-content: center;
   font-size: $font-size-main;
@@ -283,7 +324,7 @@ footer {
 }
 
 /* スタッフ紹介 */
-#top-staff {
+.top-staff {
   display: flex;
   justify-content: center;
   font-size: $font-size-main;
@@ -292,14 +333,14 @@ footer {
     margin-left: 70px;
   }
 }
-#top-representative {
+.top-representative {
   font-size: 20px;
 }
-#top-name {
+.top-name {
   font-size: $font-size-30;
   font-weight: bold;
 }
-#top-name-kana {
+.top-name-kana {
   font-size: 10px;
 }
 .button-staff {
@@ -321,12 +362,13 @@ footer {
   color: #ffffff;
   font-size: $font-size-main;
 }
-#school-detail {
+.school-detail {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 50px;
   p {
-    padding: 50px 0 50px 40px;
+    padding-left: 40px;
     width: 40%;
   }
 }
@@ -334,7 +376,7 @@ footer {
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
-  h2 {
+  h3 {
     font-size: 60px;
     font-weight: bold;
     color: $color-gold;
@@ -343,7 +385,7 @@ footer {
     width: 70%;
     margin-left: 30px;
     margin-top: 15px;
-    h3 {
+    h4 {
       font-size: $font-size-30;
     }
   }
@@ -353,7 +395,7 @@ footer {
   div {
     margin-right: 30px;
   }
-  h2 {
+  h3 {
     padding-right: 25px;
   }
 }
@@ -365,7 +407,8 @@ footer {
 .school-schedule-fee {
   margin-right: 20px;
   margin-left: 20px;
-  h2 {
+  h3 {
+    font-size: 25px;
     margin-left: 3%;
     margin-bottom: 30px;
     border-left: 4px solid $color-gold;
@@ -395,13 +438,13 @@ footer {
 }
 .card_textbox {
   padding: 12%;
-  h3 {
+  h4 {
     background: $color-gold;
-    font-size: 18spx;
+    font-size: 18px;
     border-radius: 8px 8px 0 0;
     text-align: center;
   }
-  h4 {
+  h5 {
     font-size: 16px;
     border-left: 2px solid $color-gold;
     padding-left: 8px;
@@ -428,10 +471,10 @@ footer {
     padding-left: 5px;
   }
 }
-#school-uzura {
+.school-uzura {
   margin-top: 40px;
 }
-#school-gujo {
+.school-gujo {
   margin-top: 40px;
 }
 
@@ -443,16 +486,16 @@ footer {
   display: flex;
   justify-content: center;
   iframe {
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
   }
   div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
     background-color: $color-gold;
     font-size: 25px;
     color: #ffffff;
@@ -467,24 +510,25 @@ footer {
 }
 
 /* ユニフォーム */
-#uniform-bibs {
+.uniform-bibs {
   text-align: center;
   background-color: $color-gold;
   color: #ffffff;
   padding-top: 15px;
   padding-bottom: 15px;
 }
-#uniform-bibs-img {
+.uniform-bibs-img {
   width: 100%;
 }
-#school-original {
+.school-original {
   text-align: center;
   padding-top: 50px;
-  h3 {
+  h4 {
     padding-bottom: 20px;
+    font-size: 20px;
     font-weight: bold;
   }
-  #school-original-text {
+  .school-original-text {
     width: 80%;
     margin: 0 auto;
     padding-bottom: 20px;
@@ -506,15 +550,15 @@ footer {
   color: #ffffff;
   padding-top: 40px;
 }
-#school-contact-details {
+.school-contact-details {
   color: #ffffff;
   padding-bottom: 70px;
-  #school-message {
+  .school-message {
     font-size: $font-size-35;
     padding-bottom: 30px;
   }
 }
-#school-contact-details > p {
+.school-contact-details > p {
   text-align: center;
 }
 
@@ -528,17 +572,18 @@ footer {
   width: 80%;
   margin: 0 auto;
   font-size: $font-size-main;
-  h2 {
+  h3 {
     margin-left: 3%;
     margin-bottom: 30px;
     border-left: 4px solid $color-gold;
     padding-left: 20px;
+    font-size: 25px;
   }
 }
 .class-introduction-main {
   padding-left: 7%;
   .class-introduction-text {
-    padding: 0 0 3% 1%;
+    padding: 0 0 5% 1%;
   }
 }
 .class-name{
@@ -548,18 +593,19 @@ footer {
   color: #ffffff;
   padding-top: 3px;
   padding-bottom: 3px;
-  h3 {
+  h4 {
     text-align: center;
+    font-size: 18px;
   }
 }
-#class-merit {
+.class-merit {
   text-align: center;
   font-size: 25px;
   font-weight: bold;
   padding-top: 50px;
   padding-bottom: 10px;
 }
-#class-merit-detail {
+.class-merit-detail {
   border-top: 3px solid $color-gold;
   border-bottom: 3px solid $color-gold;
   width: 80%;
@@ -580,21 +626,22 @@ footer {
     padding-left: 30px;
   }
 }
-#class-merit-detail-top {
+.class-merit-detail-top {
   margin-top: 15px;
 }
-#class-merit-detail-bottom {
+.class-merit-detail-bottom {
   margin-bottom: 15px;
 }
 .class-gujo-others {
   margin-top: 70px;
 }
-#class-others-main {
+.class-others-main {
   font-size: 25px;
   padding: 0;
+  margin-bottom: 10px;
 }
-#class-others-detail,
-#class-others-resson {
+.class-others-detail,
+.class-others-resson {
   padding-left: 2%;
 }
 
@@ -607,13 +654,13 @@ footer {
   background-color: #000000;
   color: #ffffff;
 }
-#methods-first {
+.methods-first {
   width: 70%;
   display: flex;
   margin: 0 auto;
   font-size: $font-size-main;
 }
-#methods-second {
+.methods-second {
   padding-top: 200px;
   font-size: $font-size-main;
   background-image: url(../images/methods/methods_background.jpg);
@@ -624,7 +671,7 @@ footer {
   margin: 0 auto;
   padding-bottom: 90px;
   width: 85%;
-  h2 {
+  h3 {
     text-align: center;
     padding-bottom: 20px;
     font-size: $font-size-30;
@@ -634,13 +681,13 @@ footer {
     padding-bottom: 50px;
   }
 }
-#methods-text-detail-first {
+.methods-text-detail-first {
   padding-right: 40px;
 }
-#methods-text-detail-second {
+.methods-text-detail-second {
   padding-left: 40px;
 }
-#methods-age {
+.methods-age-main {
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -655,7 +702,7 @@ footer {
   .methods-age {
     margin-top: 40px;
   }
-  h2 {
+  h3 {
     font-size: 28px;
     font-weight: bold;
     white-space: nowrap;
@@ -664,22 +711,22 @@ footer {
   span {
     font-size: 15px;
   }
-  h3 {
+  h4 {
     padding-top: 40px;
     font-size: 20px;
     font-weight: bold;
   }
 }
-#pre-golden-age {
+.pre-golden-age {
   margin: 60px 10px 0 10px;
 }
-#golden-age {
+.golden-age {
   margin: 30px 10px 0 10px;
 }
-#post-golden-age {
+.post-golden-age {
   margin: 40px 10px 0 10px;
 }
-#independent-age {
+.independent-age {
   margin: 40px 10px 0 10px;
 }
 .circle-one {
@@ -734,7 +781,7 @@ footer {
   ---------- */
 
   /* ヘッダーの編集 */
-  #logo {
+  .logo {
     width: 50px;
   }
   /* PC用ナビゲーション非表示 */
@@ -742,7 +789,7 @@ footer {
     display: none;
   }
   /* ハンバーガーメニュー */
-  #menu-sp {
+  .menu-sp {
     display: block;
     position: absolute;
     right: 0;
@@ -768,7 +815,7 @@ footer {
       list-style: none;
     }
   }
-  #close {
+  .close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -789,7 +836,7 @@ footer {
     background-repeat: no-repeat;
     background-position: right top;
   }
-  #sns{
+  .sns{
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -798,15 +845,41 @@ footer {
     }
   }
 
+  /* トップに戻るボタン */
+  .backToTop {
+    width: 45px;
+    height: 45px;
+    font-size: $font-size-main-sp;
+  }
+
   /* タイトル */
   .title {
     margin-top: 50px;
     margin-bottom: 30px;
-    h1 {
-      font-size: $font-size-30;
+    h2 {
+      font-size: 25px;
     }
     img {
       width: 250px;
+    }
+    .top-long {
+      width: 300px;
+    }
+  }
+
+  /* フッターの編集 */
+  .footer {
+    flex-direction: column;
+    text-align: right;
+  }
+  .footer {
+    .footer-logo {
+      width: 60px;
+    }
+    .footer-access {
+      width: 40%;
+      margin-top: 20px;
+      margin-right: 5%;
     }
   }
 
@@ -815,36 +888,36 @@ footer {
   ---------- */
 
   /* スクール紹介の編集 */
-  #top-introduction {
+  .top-introduction {
     flex-direction: column;
     font-size: $font-size-main-sp;
     p {
       margin: 0 auto;
     }
   }
-  #top-introduction > div > p {
+  .top-introduction > div > p {
     padding-top: 30px;
   }
-  #top-introduction > img {
+  .top-introduction > img {
     margin: 0 auto;
     width: 65%;
   }
-  #top-instagram-guidance > div > a > img {
+  .top-instagram-guidance > div > a > img {
     width: 30%;
   }
-  #top-club-partner {
+  .top-club-partner {
     font-size: $font-size-main-sp;
     width: 90%;
     margin: 0 auto;
-    h2 {
-      font-size: 20px;
+    h3 {
+      font-size: 15px;
     }
   }
-  #top-detail {
+  .top-detail {
     background: url(../images/home/introduction_background.png) no-repeat center /contain;
     background-color: #000000;
   }
-  #top-schedule-venue {
+  .top-schedule-venue {
     flex-direction: column;
     padding-top: 20px;
   }
@@ -852,11 +925,329 @@ footer {
     font-size: $font-size-main-sp;
     padding-left: 15px;
   }
-  #top-venue {
+  .top-venue {
     margin-left: 3%;
   }
-  #top-schedule > h2,
-  #top-venue > h2 {
+  .top-schedule > h3,
+  .top-venue > h3 {
+    font-size: 18px;
+    padding-left: 10px;
+  }
+
+  /* 入会募集の編集 */
+  #top-recruitment {
+    .top-recruitment-message {
+      .top-message {
+        font-size: $font-size-main-sp;
+      }
+      .top-note {
+        font-size: 8px;
+      }
+    }
+  }
+  #top-guidance {
+    margin-top: 40px;
+    p {
+      font-size: 15px;
+    }
+  }
+  .top-official {
+    flex-direction: column;
+    text-align: right;
+  }
+  .top-official-uzura,
+  .top-official-gujo {
+    font-size: $font-size-main-sp;
+    display: flex;
+    margin: 0 auto;
+    p {
+      white-space: nowrap;
+    }
+    span {
+      font-size: 15px;
+    }
+    img {
+      width: 100px;
+      padding-top: 0;
+      padding-left: 20px;
+    }
+  }
+  .top-official-uzura {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .top-official-uzura > p::after,
+  .top-official-gujo > p::after {
+    content: url("../images/home/arrow.png");
+    padding-left: 10px;
+  }
+
+  /* 指導メソッド */
+  .top-methods-message {
+    flex-direction: column-reverse;
+    p {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 30px;
+      font-size: $font-size-main-sp;
+    }
+    img {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  /* スタッフ紹介 */
+  .top-staff {
+    flex-direction: column;
+    p {
+      margin: 10px auto 0 auto;
+      width: 80%;
+      font-size: $font-size-main-sp;
+    }
+    div {
+      margin: 0 auto;
+    }
+  }
+  .top-representative {
+    font-size: 15px;
+  }
+  .top-name {
     font-size: 20px;
+    font-weight: bold;
+  }
+  .top-name-kana {
+    font-size: 10px;
+  }
+  .button-staff {
+    padding: 0 0 30px 0;
+  }
+  .top-staff-title {
+    margin-top: 20px;
+  }
+
+  /* -------------------
+  スクール紹介ページの編集
+  -------------------- */
+
+  /* スクール紹介 */
+  .school-detail {
+    flex-direction: column;
+    p {
+      font-size: $font-size-main-sp;
+      padding: 20px 0 0 0;
+      width: 65%;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70%;
+      }
+    }
+  }
+  .school-detail-message {
+    font-size: $font-size-main-sp;
+    h3 {
+      font-size: $font-size-35;
+    }
+    div {
+      width: 70%;
+      margin-left: 20px;
+      h4 {
+        font-size: 20px;
+      }
+    }
+  }
+  .school-detail-message02 {
+    div {
+      margin-right: 20px;
+    }
+  }
+
+  /* スケジュール/会費 */
+  .school-schedule-fee {
+    p {
+      font-size: $font-size-main-sp;
+    }
+  }
+
+  /* 練習場所 */
+  .school-place-map {
+    iframe {
+      width: 150px;
+      height: 150px;
+    }
+    div {
+      width: 150px;
+      height: 150px;
+      font-size: $font-size-main-sp;
+    }
+  }
+  .school-place-main {
+    font-size: $font-size-main-sp;
+  }
+
+  /* ユニフォーム */
+  .uniform-bibs {
+    font-size: 15px;
+  }
+  .school-original {
+    font-size: $font-size-main-sp;
+    padding-top: 30px;
+    h4 {
+      font-size: 15px;
+    }
+    span {
+      font-size: 18px;
+    }
+  }
+
+  /* お問い合わせ */
+  #school-contact {
+    // background-color: #000000;
+    font-size: $font-size-main-sp;
+  }
+  .school-contact-details {
+    // color: #ffffff;
+    padding-bottom: 40px;
+    .school-message {
+      font-size: 20px;
+      // padding-bottom: 30px;
+    }
+    .school-official-uzura {
+      margin-top: 50px;
+    }
+  }
+
+  /* --------------
+  クラス紹介の編集
+  --------------- */
+  .class-introduction {
+    font-size: $font-size-main-sp;
+  }
+ .class-introduction-main {
+    .class-introduction-text {
+      padding: 0 0 10% 1%;
+    }
+  }
+  .class-name{
+    width: 140px;
+    h4 {
+      font-size: 15px;
+    }
+  }
+  .class-merit {
+    font-size: 15px;
+    padding-top: 30px;
+  }
+  .class-merit-detail {
+    div {
+      padding: 15px 0;
+    }
+    .class-merit-title {
+      font-size: 15px;
+    }
+  }
+  .class-others-main {
+    font-size: 18px;
+  }
+  /* -------------------
+  指導メソッドページの編集
+  -------------------- */
+
+  /* 指導メソッド */
+  .methods-first {
+    width: 85%;
+    font-size: $font-size-main-sp;
+  }
+  .methods-second {
+    padding-top: 50px;
+    font-size: $font-size-main-sp;
+    // background-image: url(../images/methods/methods_background.jpg);
+    // background-size: 100% auto;
+  }
+  .methods-second-text {
+    flex-direction: column;
+    // display: flex;
+    // margin: 0 auto;
+    padding-bottom: 50px;
+    // width: 85%;
+    h3 {
+      // text-align: center;
+      // padding-bottom: 20px;
+      font-size: 20px;
+    }
+    .methods-second-img-sp {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+  .methods-second-text-sp {
+    flex-direction: column-reverse;
+  }
+  .methods-text-detail-first {
+    padding-right: 0;
+  }
+  .methods-text-detail-second {
+    padding-left: 0;
+  }
+  .methods-age-main {
+    font-size: $font-size-main-sp;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    // padding-bottom: 50px;
+  }
+  .methods-circle {
+    // text-align: center;
+    margin: 0;
+    margin-bottom: 30px;
+    // content: "";
+    width: 300px;
+    height: 300px;
+    // border: 3px solid $color-gold;
+    // border-radius: 50%;
+    // .methods-age {
+    //   margin-top: 40px;
+    // }
+    h3 {
+      font-size: 20px;
+      // font-weight: bold;
+      // white-space: nowrap;
+      // background-color: #000000;
+    }
+    span {
+      font-size: 10px;
+    }
+    h4 {
+      // padding-top: 40px;
+      font-size: 15px;
+      // font-weight: bold;
+    }
+  }
+  .pre-golden-age {
+    margin: 20px 10px 0 10px;
+  }
+  // .golden-age {
+  //   margin: 30px 10px 0 10px;
+  // }
+  // .post-golden-age {
+  //   margin: 40px 10px 0 10px;
+  // }
+  // .independent-age {
+  //   margin: 40px 10px 0 10px;
+  // }
+  .circle-one {
+    margin-right: 0;
+  }
+  .circle-second {
+    margin-left: 0;
   }
 }

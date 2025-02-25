@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luz soccer school</title>
     <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <!-- slickの読み込み -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
@@ -13,30 +12,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <!-- cssの読み込み -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!-- ヘッダー -->
     <header>
-      <div id="wrap">
-        <div>
+      <div class="wrap">
+        <h1>
           <a href="index.html">
-            <img id="logo" src="images/common/logo.png" alt="トップページに戻る">
+            <img class="logo" src="images/common/logo.png" alt="Luz soccer school">
           </a>
-        </div>
-        <div class="nav-pc" id="icons">
-          <img id="tel" src="images/common/tel.png" alt="電話">
+        </h1>
+        <div class="nav-pc icons">
+          <img class="tel" src="images/common/tel.png" alt="電話">
           <a href="https://www.instagram.com/luzsoccerschool?igsh=MW5qcmZwMDF1d2tiYw%3D%3D&utm_source=qr">
-            <img id="header-icon-instagram" src="images/common/instagram_logo.png" alt="instagram">
+            <img class="header-icon-instagram" src="images/common/instagram_logo.png" alt="instagram">
           </a>
           <a href="index.html#top-official">
-            <img id="header-icon-line" src="images/common/icons8-line-100.png" alt="line">
+            <img class="header-icon-line" src="images/common/icons8-line-100.png" alt="line">
           </a>
         </div>
       </div>
       <div>
         <!-- PC用ナビゲーション -->
         <nav class="nav-pc">
-          <ul id="nav">
+          <ul class="nav">
             <li><a href="index.html">ホーム</a></li>
             <li><a href="school.html">スクール紹介</a></li>
             <li><a href="class.html">クラス紹介</a></li>
@@ -46,12 +47,12 @@
           </ul>
         </nav>
         <!-- スマホ用メニューボタン -->
-        <button id="menu-sp" onclick="document.getElementById('nav-sp').style.display = 'block'">
+        <button class="menu-sp" onclick="document.getElementById('nav-sp').style.display = 'block'">
           <img src="images/common/hamburger.png" alt="ナビゲーションを開く">
         </button>
         <!-- スマホ用ナビゲーション -->
          <div id="nav-sp">
-            <button id="close" onclick="document.getElementById('nav-sp').style.display = 'none'">
+            <button class="close" onclick="document.getElementById('nav-sp').style.display = 'none'">
               <img src="images/common/close.png" alt="ナビゲーションを閉じる">
             </button>
             <nav>
@@ -64,21 +65,24 @@
                 <li><a class="menu" href="index.html#top-guidance" onclick="document.getElementById('nav-sp').style.display = 'none'">体験の申し込み</a></li>
               </ul>
             </nav>
-            <div id="sns">
-              <img id="tel" src="images/common/tel.png" alt="電話">
+            <div class="sns">
+              <img class="tel" src="images/common/tel.png" alt="電話">
               <a href="https://www.instagram.com/luzsoccerschool?igsh=MW5qcmZwMDF1d2tiYw%3D%3D&utm_source=qr">
-                <img id="header-icon-instagram" src="images/common/instagram_logo.png" alt="instagram">
+                <img class="header-icon-instagram" src="images/common/instagram_logo.png" alt="instagram">
               </a>
               <a href="index.html#top-official">
-                <img id="header-icon-line" src="images/common/icons8-line-100.png" alt="line">
+                <img class="header-icon-line" src="images/common/icons8-line-100.png" alt="line">
               </a>
             </div>
          </div>
       </div>
     </header>
     <main>
+      <!-- トップに戻る -->
+      <button class="backToTop js-backToTop">TOP</button>
+      
       <!-- カルーセル -->
-      <section id="carousel-section">
+      <section class="carousel-section">
        <div class="carousel">
           <div class="carouselImg">
             <img src="images/home/header_1.png" alt="スクールの様子">
@@ -91,20 +95,19 @@
           </div>
        </div>
       </section>
+
       <!-- スクール紹介 -->
       <section id="top-school">
         <div class="title">
-          <h1>スクール紹介</h1>
+          <h2>スクール紹介</h2>
           <img class="title_underline" src="images/common/line_short.png" alt="">
         </div>
         <div>
-          <div id="top-introduction">
-            <!-- <div id="sp-play-img"> -->
-              <img src="images/home/play_image.png" alt="サッカーをしている様子">
-            <!-- </div> -->
+          <div class="top-introduction">
+            <img src="images/home/play_image.png" alt="サッカーをしている様子">
             <div>
               <p>Luz(ルース)とはスペイン語で「光・輝く」の意味。<br>サッカーの楽しさはもちろん、選手自らが考えてプレーすることを大切にし、Jリーグクラブでの10年以上の指導経験を生かして個人の能力を最大限に引き出す指導を目指します。<br>サッカーを通して技術指導だけではなく、子供たちの自立心、協調性、マナー、コミュニケーション能力等の人間性も併せて育成します。</p>
-              <div id="top-instagram-guidance">
+              <div class="top-instagram-guidance">
                 <p>Instagramにスクールの様子を載せています。<br>ぜひ一度ご覧ください！</p>
                 <div>
                   <a href="https://www.instagram.com/luzsoccerschool?igsh=MW5qcmZwMDF1d2tiYw%3D%3D&utm_source=qr">
@@ -114,9 +117,9 @@
               </div>
             </div>
           </div>
-          <div id="top-club-partner">
+          <div class="top-club-partner">
             <div>
-              <h2>クラブパートナー様を募集しています。</h2>
+              <h3>クラブパートナー様を募集しています。</h3>
               <p>Luz soccer school（ルース）は地域に応援されるスクール、クラブを目指しています。
                 <br>地域の企業様と協力し、子どもたちの活動を応援していきます。
                 <br>共に応援してくださるクラブパートナー様を募集しておりますので、是非宜しくお願い致します。
@@ -124,20 +127,26 @@
             </div>
           </div>
         </div>
-        <div id="top-detail">
-          <div id="top-schedule-venue">
-            <div id="top-schedule">
-              <h2>スケージュール</h2>
+        <div class="top-detail">
+          <div class="top-schedule-venue">
+            <div class="top-schedule">
+              <h3>スケージュール</h3>
               <div class="top-schedule-contents">
                 <div>
-                  <img class="top-detail-img" src="images/home/uzura.png" alt="鶉校">
-                  <table id="schedule-table1">
+                  <div class="top-detail-title">
+                    <h4>鶉校</h4>
+                  </div>
+                  <table class="schedule-table1">
+                    <tr>
+                      <th class="top-week">金曜日</th>
+                      <td class="top-cell">キッズクラス
+                        <br>【年長】１８：００～１８：５０
+                      </td>
+                    </tr>
                     <tr>
                       <th class="top-week">月曜日/<br>&nbsp;&nbsp;&nbsp;&nbsp;木曜日</th>
                       <td class="top-cell">エンジョイクラス
                         <br>【１～３年生】１８：００～１９：００
-                        <br>強化クラス
-                        <br>【４～６年生】１９：１５～２０：４５
                       </td>
                     </tr>
                     <tr>
@@ -147,16 +156,18 @@
                       </td>
                     </tr>
                     <tr>
-                      <th class="top-week">金曜日</th>
-                      <td class="top-cell">キッズクラス
-                        <br>【年長】１８：００～１８：５０
+                      <th class="top-week">月曜日/<br>&nbsp;&nbsp;&nbsp;&nbsp;木曜日</th>
+                      <td class="top-cell">強化クラス
+                        <br>【４～６年生】１９：１５～２０：４５
                       </td>
                     </tr>
                   </table>
                 </div>
                 <div>
-                  <img class="top-detail-img" src="images/home/gujo.png" alt="郡上校">
-                  <table id="schedule-table2">
+                  <div class="top-detail-title">
+                    <h4>郡上校</h4>
+                  </div>
+                  <table class="schedule-table2">
                     <tr>
                       <th class="top-week">第１月曜日/<br>&nbsp;&nbsp;&nbsp;&nbsp;第４金曜日</th>
                       <td class="top-cell">特別クラス
@@ -167,15 +178,19 @@
                 </div>
               </div>
             </div>
-            <div id="top-venue">
-              <h2>練習場所</h2>
+            <div class="top-venue">
+              <h3>練習場所</h3>
               <div class="top-schedule-contents">
                 <div>
-                  <img class="top-detail-img" src="images/home/uzura.png" alt="鶉校">
+                  <div class="top-detail-title">
+                    <h4>鶉校</h4>
+                  </div>
                   <p>WHISTLE SECOND COURT</p>
                 </div>
                 <div>
-                  <img class="top-detail-img" src="images/home/gujo.png" alt="郡上校">
+                  <div class="top-detail-title">
+                    <h4>郡上校</h4>
+                  </div>
                   <p>美並まん真ん中グラウンド</p>
                 </div>
               </div>
@@ -192,30 +207,29 @@
       <!-- 入会募集 -->
       <section id="top-recruitment">
         <div class="title">
-          <h1>新メンバー随時募集中です!</h1>
-          <img src="images/common/line_long.png" alt="">
+          <h2>新メンバー随時募集中です!</h2>
+          <img class="top-long" src="images/common/line_long.png" alt="">
         </div>
         <img src="images/home/recruitment_image.jpg" alt="生徒たち">
-        <div id="top-recruitment-message">
-          <p id="top-message">Luz soccer school（ルース）では、本気でサッカーを楽しみたい。本気でサッカーが上手くなりたい。そんなスクール生を募集しています。
-            <br>2024年4月から鶉校がスタートし現在50名のスクール生が在籍しています。
-            <br>2025年から郡上校も開校となりました。1人でも多くの選手にサッカーの楽しさを伝え、個人のレベルアップを約束します。
-            <br>また無料体験も随時受付しています。
+        <div class="top-recruitment-message">
+          <p class="top-message">Luz soccer school（ルース）では、本気でサッカーを楽しみたい。本気でサッカーが上手くなりたい。そんなスクール生を募集しています。
+            <br>2024年4月から鶉校が開校し、2025年から郡上校も開校となりました。
+            <br>1人でも多くの選手にサッカーの楽しさを伝え、個人のレベルアップを約束します。また無料体験も随時受付しています。
           </p>
-          <p id="top-note">※入会時にスポーツ安全保険に加入させて頂きます。</p>
+          <p class="top-note">※入会時にスポーツ安全保険に加入させて頂きます。</p>
         </div>
         <div id="top-guidance">
           <p>体験のお申込みは公式LINEにて受付中です。</p>
           <img src="images/home/underline.png" alt="体験申し込みの案内">
         </div>
-        <div id="top-official">
-          <div id="top-official-uzura">
+        <div class="top-official">
+          <div class="top-official-uzura">
             <p><span>鶉校</span>での体験希望の方はこちら</p>
             <a href="https://line.me/R/ti/p/@709lirft">
               <img src="images/home/uzura_line_qrcode.png" alt="鶉校の公式line">
             </a>
           </div>
-          <div id="top-official-gujo">
+          <div class="top-official-gujo">
             <p><span>郡上校</span>での体験希望の方はこちら</p>
             <a href="https://line.me/R/ti/p/@813suatc">
               <img src="images/home/gujo_line_qrcode.png" alt="郡上校の公式line">
@@ -228,10 +242,10 @@
         <section id="top-methods-staff">
           <!-- 指導メソッド -->
           <div class="title top-methods-title">
-            <h1>指導メソッド</h1>
+            <h2>指導メソッド</h2>
             <img class="title_underline" src="images/common/line_short.png" alt="">
           </div>
-          <div id="top-methods-message">
+          <div class="top-methods-message">
             <p>Luz soccer school（ルース）では、幼稚園～小学生を対象にサッカースクールを展開しています。
               <br>プロサッカーコーチがサッカーの楽しさを伝え、各年代で必要な技術や考える力を養う場を提供しています。サッカーの楽しさはもちろん、上手くなるための指導、考え方など、人として成長できるようサポートしていきます。
             </p>
@@ -244,15 +258,15 @@
           </div>
 
           <!-- スタッフ紹介 -->
-          <div class="title">
-            <h1>スタッフ紹介</h1>
+          <div class="title top-staff-title">
+            <h2>スタッフ紹介</h2>
             <img class="title_underline" src="images/common/line_short.png" alt="">
           </div>
-          <div id="top-staff">
+          <div class="top-staff">
             <div>
               <img src="images/home/staff1.jpg" alt="コーチ">
             </div>
-            <p><span id="top-representative">代表：</span><span id="top-name">羽山&nbsp;武志</span><span id="top-name-kana">（はやま&nbsp;たけし）</span>
+            <p><span class="top-representative">代表：</span><span class="top-name">羽山&nbsp;武志</span><span class="top-name-kana">（はやま&nbsp;たけし）</span>
               <br>郡上高校サッカー部監督/ジュビロ磐田U-15/ジュビロ掛川U-12監督(2012～2013)/FC岐阜U-15コーチ(U-13監督)/FC岐阜U-15監督/ FC岐阜U-18コーチ(2014～2022) /Luz soccer school代表(2023)
               <br>【資格】日本サッカー協会指導者ライセンス/審判ライセンス/キッズリーダー/AFAA公認パーソナルトレーナー
             </p>
@@ -267,9 +281,9 @@
 
     <!-- フッター -->
     <footer>
-      <div id="footer">
+      <div class="footer">
         <a href="index.html">
-          <img id="footer-logo" src="images/common/logo.png" alt="ロゴ">
+          <img class="footer-logo" src="images/common/logo.png" alt="ロゴ">
         </a>
         <a href="https://www.instagram.com/luzsoccerschool?igsh=MW5qcmZwMDF1d2tiYw%3D%3D&utm_source=qr">
           <img class="footer-access" src="images/common/footer_instagram.png" alt="instagram">
@@ -281,7 +295,7 @@
           <img class="footer-access" src="images/common/footer_line_gujo.png" alt="郡上校公式line">
         </a>
       </div>
-      <p id="copyright">&copy;2025 Luz soccer school</p>
+      <p class="copyright">&copy;2025 Luz soccer school</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

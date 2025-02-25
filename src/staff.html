@@ -5,34 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luz soccer school</title>
     <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- slickの読み込み -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- GoogleFont読み込み -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <!-- cssの読み込み -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!-- ヘッダー -->
     <header>
-      <div id="wrap">
-        <div>
+      <div class="wrap">
+        <h1>
           <a href="index.html">
-            <img id="logo" src="images/common/logo.png" alt="トップページに戻る">
+            <img class="logo" src="images/common/logo.png" alt="Luz soccer school">
           </a>
-        </div>
-        <div id="icons">
-          <img id="tel" src="images/common/tel.jpg" alt="電話">
+        </h1>
+        <div class="nav-pc icons">
+          <img class="tel" src="images/common/tel.png" alt="電話">
           <a href="https://www.instagram.com/luzsoccerschool?igsh=MW5qcmZwMDF1d2tiYw%3D%3D&utm_source=qr">
-            <img id="header-icon-instagram" src="images/common/instagram_logo.png" alt="instagram">
+            <img class="header-icon-instagram" src="images/common/instagram_logo.png" alt="instagram">
           </a>
           <a href="index.html#top-official">
-            <img id="header-icon-line" src="images/common/icons8-line-100.png" alt="line">
+            <img class="header-icon-line" src="images/common/icons8-line-100.png" alt="line">
           </a>
         </div>
       </div>
       <div>
-        <nav>
-          <ul id="nav">
+        <!-- PC用ナビゲーション -->
+        <nav class="nav-pc">
+          <ul class="nav">
             <li><a href="index.html">ホーム</a></li>
             <li><a href="school.html">スクール紹介</a></li>
             <li><a href="class.html">クラス紹介</a></li>
@@ -41,13 +46,45 @@
             <li><a href="index.html#top-guidance">体験の申し込み</a></li>
           </ul>
         </nav>
+        <!-- スマホ用メニューボタン -->
+        <button class="menu-sp" onclick="document.getElementById('nav-sp').style.display = 'block'">
+          <img src="images/common/hamburger.png" alt="ナビゲーションを開く">
+        </button>
+        <!-- スマホ用ナビゲーション -->
+         <div id="nav-sp">
+            <button class="close" onclick="document.getElementById('nav-sp').style.display = 'none'">
+              <img src="images/common/close.png" alt="ナビゲーションを閉じる">
+            </button>
+            <nav>
+              <ul>
+                <li><a class="menu" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'">ホーム</a></li>
+                <li><a class="menu" href="school.html" onclick="document.getElementById('nav-sp').style.display = 'none'">スクール紹介</a></li>
+                <li><a class="menu" href="class.html" onclick="document.getElementById('nav-sp').style.display = 'none'">クラス紹介</a></li>
+                <li><a class="menu" href="method.html" onclick="document.getElementById('nav-sp').style.display = 'none'">指導メソッド</a></li>
+                <li><a class="menu" href="staff.html" onclick="document.getElementById('nav-sp').style.display = 'none'">スタッフ紹介</a></li>
+                <li><a class="menu" href="index.html#top-guidance" onclick="document.getElementById('nav-sp').style.display = 'none'">体験の申し込み</a></li>
+              </ul>
+            </nav>
+            <div class="sns">
+              <img class="tel" src="images/common/tel.png" alt="電話">
+              <a href="https://www.instagram.com/luzsoccerschool?igsh=MW5qcmZwMDF1d2tiYw%3D%3D&utm_source=qr">
+                <img class="header-icon-instagram" src="images/common/instagram_logo.png" alt="instagram">
+              </a>
+              <a href="index.html#top-official">
+                <img class="header-icon-line" src="images/common/icons8-line-100.png" alt="line">
+              </a>
+            </div>
+         </div>
       </div>
     </header>
     <main>
+      <!-- トップに戻る -->
+      <button class="backToTop js-backToTop">TOP</button>
+      
+      <!-- スタッフ紹介 -->
       <section>
-        <!-- スタッフ紹介 -->
         <div class="title">
-          <h1>スタッフ紹介</h1>
+          <h2>スタッフ紹介</h2>
           <img class="title_underline" src="images/common/line_short.png" alt="">
         </div>
         <div class="staff-introduction">
@@ -56,7 +93,7 @@
           </div>
           <div class="staff-introduction-main">
             <p>
-              <span id="top-representative">代表：</span><span id="top-name">羽山&nbsp;武志</span><span id="top-name-kana">（はやま&nbsp;たけし）</span>
+              <span class="top-representative">代表：</span><span class="top-name">羽山&nbsp;武志</span><span class="top-name-kana">（はやま&nbsp;たけし）</span>
             </p>
             <div>
               <p class="history-message">経歴</p>
@@ -87,7 +124,7 @@
           </div>
           <div class="staff-introduction-main">
             <p>
-              <span id="top-representative">コーチ：</span><span id="top-name">竹田&nbsp;司</span><span id="top-name-kana">（たけだ&nbsp;つかさ）</span>
+              <span class="top-representative">コーチ：</span><span class="top-name">竹田&nbsp;司</span><span class="top-name-kana">（たけだ&nbsp;つかさ）</span>
             </p>
             <div>
               <p class="history-message">経歴</p>
@@ -111,9 +148,9 @@
     
     <!-- フッター -->
     <footer>
-      <div id="footer">
+      <div class="footer">
         <a href="index.html">
-          <img id="footer-logo" src="images/common/logo.png" alt="ロゴ">
+          <img class="footer-logo" src="images/common/logo.png" alt="ロゴ">
         </a>
         <a href="https://www.instagram.com/luzsoccerschool?igsh=MW5qcmZwMDF1d2tiYw%3D%3D&utm_source=qr">
           <img class="footer-access" src="images/common/footer_instagram.png" alt="instagram">
@@ -125,7 +162,12 @@
           <img class="footer-access" src="images/common/footer_line_gujo.png" alt="郡上校公式line">
         </a>
       </div>
-      <p id="copyright">&copy;2025 Luz soccer school</p>
+      <p class="copyright">&copy;2025 Luz soccer school</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- slickの読み込み -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
