@@ -55,7 +55,6 @@ $font-size-30: 30px;
     list-style: none;
     text-decoration: none;
     align-content: center;
-    margin-top: 5px;
     a {
       text-decoration: none;
       color: #ffffff;
@@ -63,6 +62,9 @@ $font-size-30: 30px;
       font-weight: bold;
     }
   } 
+}
+.btn:hover {
+  transform: scale(1.1);
 }
 /* スマホ用ナビを非表示 */
 #nav-sp, .menu-sp {
@@ -75,15 +77,14 @@ $font-size-30: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  right: 20px;
-  bottom: 20px;
+  right: 0px;
+  bottom: 40px;
   width: 80px;
   height: 80px;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
   background: $color-gold;
-  border-radius: 50%;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
@@ -112,6 +113,9 @@ footer {
     margin-top: 20%;
   }
 }
+.footer-link:hover {
+  transform: scale(0.9);
+}
 .copyright {
   padding: 60px 0 20px 0;
   text-align: center;
@@ -125,7 +129,9 @@ footer {
 .button {
   text-align: center;
   margin-top: 30px;
-  padding-bottom: 30px;
+}
+.button:hover {
+  transform: scale(0.9);
 }
 
 /* カルーセル */
@@ -138,9 +144,18 @@ footer {
 }
 
 /* スクール紹介 */
-.title {
+.title-first {
   text-align: center;
   margin-top: 70px;
+  margin-bottom: 60px;
+  h2 {
+    font-size: 50px;
+    font-weight: bold;
+  }
+}
+.title {
+  text-align: center;
+  margin-top: 150px;
   margin-bottom: 60px;
   h2 {
     font-size: 50px;
@@ -193,8 +208,9 @@ footer {
 }
 .top-detail {
   margin-top: 50px;
+  padding-bottom: 50px;
   width: 100%;
-  background-image: url(../images/home/introduction_background.png);
+  background-image: url(../images/home/introduction_background.jpg);
   background-size: cover;
   color: #ffffff;
   position: relative;
@@ -216,7 +232,7 @@ footer {
 }
 .top-schedule > h3::after,
 .top-venue > h3::after {
-  content: url("../images/home/line.png");
+  content: url("../images/home/line.jpg");
   display: inline-block;
   transform: scale(0.7);
 }
@@ -243,6 +259,34 @@ footer {
     p {
       padding: 20px 20px 20px 20px;
     }
+  }
+}
+
+/* クラス紹介 */
+.top-class {
+  background-color: #000000;
+  padding-bottom: 100px;
+}
+.title-class {
+  padding-top: 100px;
+  margin-top: 0;
+  color: #ffffff;
+}
+.top-class-introduction {
+  width: 500px;
+  margin: 0 auto;
+  font-size: $font-size-main;
+  color: #ffffff;
+  h3 {
+    margin-left: 3%;
+    margin-bottom: 20px;
+    border-left: 4px solid $color-gold;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+  p {
+    padding-left: 30px;
+    padding-bottom: 20px;
   }
 }
 
@@ -299,10 +343,14 @@ footer {
 .top-official-uzura {
   margin-right: 13%;
 }
+.top-official-uzura-line:hover,
+.top-official-gujo-line:hover {
+  transform: scale(0.9);
+}
 
 /* 指導メソッド/スタッフ紹介 */
 #top-methods-staff {
-  background: url(../images/home/home_background.png) no-repeat center /contain;
+  background: url(../images/home/home_background.jpg) no-repeat center /contain;
   background-position: top;
   background-color: #000000;
   color: #ffffff;
@@ -310,7 +358,7 @@ footer {
 
 /* 指導メソッド */
 .top-methods-title {
-  padding-top: 30px;
+  padding-top: 100px;
 }
 .top-methods-message {
   display: flex;
@@ -326,6 +374,9 @@ footer {
 
 /* スタッフ紹介 */
 .top-staff {
+  padding-bottom: 100px;
+}
+.top-staff-main {
   display: flex;
   justify-content: center;
   font-size: $font-size-main;
@@ -344,9 +395,6 @@ footer {
 .top-name-kana {
   font-size: 10px;
 }
-.button-staff {
-  padding: 5% 0;
-}
 
 /* --------------
 スクール紹介ページの編集
@@ -359,7 +407,8 @@ footer {
   color: #ffffff;
 }
 #school-introduction {
-  background-image: url(../images/introduction/introduction_background.png);
+  background-image: url(../images/introduction/introduction_background.jpg);
+  background-size: cover;
   color: #ffffff;
   font-size: $font-size-main;
 }
@@ -549,11 +598,11 @@ footer {
 }
 .title-contact {
   color: #ffffff;
-  padding-top: 40px;
+  padding-top: 100px;
 }
 .school-contact-details {
   color: #ffffff;
-  padding-bottom: 70px;
+  padding-bottom: 120px;
   .school-message {
     font-size: $font-size-35;
     padding-bottom: 30px;
@@ -666,7 +715,7 @@ footer {
   padding-top: 200px;
   font-size: $font-size-main;
   background-image: url(../images/methods/methods_background.jpg);
-  background-size: 100% auto;
+  background-size: contain;
 }
 .methods-second-text {
   display: flex;
@@ -691,7 +740,6 @@ footer {
 }
 .methods-age-main {
   padding-top: 50px;
-  padding-bottom: 50px;
 }
 .methods-circle {
   text-align: center;
@@ -732,10 +780,23 @@ footer {
   margin: 40px 10px 0 10px;
 }
 .circle-one {
-  margin-right: 60%;
+  position: relative;
+  right: 20%;
 }
-.circle-second {
-  margin-left: 60%;
+.circle-two {
+  position: relative;
+  bottom: 100px;
+  left: 20%;
+}
+.circle-three {
+  position: relative;
+  bottom: 200px;
+  right: 20%;
+}
+.circle-four {
+  position: relative;
+  bottom: 300px;
+  left: 20%;
 }
 
 /* --------------
@@ -837,7 +898,7 @@ footer {
     margin: 0 20px;
     height: 40px;
     font-size: $font-size-main;
-    background-image: url("../images/common/arrow.png");
+    background-image: url("../images/common/arrow.jpg");
     background-repeat: no-repeat;
     background-position: right top;
   }
@@ -852,13 +913,14 @@ footer {
 
   /* トップに戻るボタン */
   .backToTop {
-    width: 45px;
-    height: 45px;
+    bottom: 50px;
+    width:50px;
+    height: 50px;
     font-size: $font-size-main-sp;
   }
 
   /* タイトル */
-  .title {
+  .title-first {
     margin-top: 50px;
     margin-bottom: 30px;
     h2 {
@@ -866,6 +928,22 @@ footer {
     }
     img {
       width: 250px;
+      display: block;
+      margin: 5px auto;
+    }
+    .top-long {
+      width: 300px;
+    }
+  }
+  .title {
+    margin-top: 80px;
+    h2 {
+      font-size: 25px;
+    }
+    img {
+      width: 250px;
+      display: block;
+      margin: 5px auto;
     }
     .top-long {
       width: 300px;
@@ -894,6 +972,12 @@ footer {
   /* ----------------
     トップページの編集
   ----------------- */
+  /* もっと見るボタンの設定 */
+  .button {
+    img {
+      width: 150px;
+    }
+  }
   /* スクール紹介の編集 */
   .top-introduction {
     flex-direction: column;
@@ -921,7 +1005,7 @@ footer {
     }
   }
   .top-detail {
-    background: url(../images/home/introduction_background_sp.png) no-repeat center /contain;
+    background: url(../images/home/introduction_background_sp.jpg) no-repeat center /contain;
     background-color: #000000;
   }
   .top-schedule-venue {
@@ -939,6 +1023,18 @@ footer {
   .top-venue > h3 {
     font-size: 18px;
     padding-left: 10px;
+  }
+
+  /* クラス紹介 */
+  .title-class {
+    margin-top: 0;
+  }
+  .top-class-introduction {
+    width: 80%;
+    font-size: $font-size-main-sp;
+    h3 {
+      font-size: 15px;
+    }
   }
 
   /* 入会募集の編集 */
@@ -967,11 +1063,15 @@ footer {
     font-size: $font-size-main-sp;
     display: flex;
     margin: 0 auto;
+    width: 80%;
+    max-width: 400px;
+    justify-content: space-between;
     p {
       white-space: nowrap;
     }
     span {
       font-size: 15px;
+      margin-left: 0px;
     }
     img {
       width: 100px;
@@ -990,6 +1090,9 @@ footer {
   }
 
   /* 指導メソッド */
+  .top-methods-title {
+    padding-top: 50px;
+  }
   .top-methods-message {
     flex-direction: column-reverse;
     p {
@@ -1005,7 +1108,7 @@ footer {
   }
 
   /* スタッフ紹介 */
-  .top-staff {
+  .top-staff-main {
     flex-direction: column;
     p {
       margin: 10px auto 0 auto;
@@ -1025,12 +1128,6 @@ footer {
   }
   .top-name-kana {
     font-size: 10px;
-  }
-  .button-staff {
-    padding: 0 0 30px 0;
-  }
-  .top-staff-title {
-    margin-top: 20px;
   }
 
   /* ---------------------
@@ -1080,6 +1177,9 @@ footer {
 
   /* スケジュール/会費 */
   .school-schedule-fee {
+    h3 {
+      font-size: 20px;
+    }
     p {
       font-size: $font-size-main-sp;
     }
@@ -1241,10 +1341,23 @@ footer {
     margin: 20px 10px 0 10px;
   }
   .circle-one {
-    margin-right: 0;
+    position: relative;
+    right: 0;
   }
-  .circle-second {
-    margin-left: 0;
+  .circle-two {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  .circle-three {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+  .circle-four {
+    position: relative;
+    bottom: 0;
+    left: 0;
   }
 
   /* --------------
@@ -1267,5 +1380,161 @@ footer {
   .staff-introduction-end {
     padding: 30px 0 70px 0;
     border-bottom: 0;
+  }
+}
+
+/* -------------------------------
+  レスポンシブ対応(iPadMini,iPadAir)
+-------------------------------- */
+@media screen and (max-width: 820px) {
+
+  /* フッターの編集 */
+  .footer {
+    flex-direction: column;
+    text-align: right;
+  }
+  .footer {
+    .footer-logo {
+      width: 60px;
+    }
+    .footer-access {
+      width: 40%;
+      margin-top: 20px;
+      margin-right: 5%;
+    }
+  }
+
+  /* お問い合わせ */
+  .top-official {
+    flex-direction: column;
+    text-align: right;
+  }
+  .top-official-uzura,
+  .top-official-gujo {
+    font-size: $font-size-main-sp;
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 400px;
+    justify-content: space-between;
+    p {
+      white-space: nowrap;
+    }
+    span {
+      font-size: 15px;
+      margin-left: 0px;
+    }
+    img {
+      width: 100px;
+      padding-top: 0;
+      padding-left: 20px;
+    }
+  }
+  .top-official-uzura {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .top-official-uzura > p::after,
+  .top-official-gujo > p::after {
+    content: url("../images/home/arrow.png");
+    padding-left: 10px;
+  }
+  #school-contact {
+    font-size: $font-size-main-sp;
+  }
+  .school-contact-details {
+    padding-bottom: 40px;
+    .school-message {
+      font-size: 20px;
+    }
+    .school-official-uzura {
+      margin-top: 50px;
+    }
+  }
+
+  /* -------------------
+  指導メソッドページの編集
+  -------------------- */
+  /* 指導メソッド */
+  .methods-first {
+    width: 85%;
+    font-size: $font-size-main-sp;
+  }
+  .methods-second {
+    padding-top: 50px;
+    font-size: $font-size-main-sp;
+  }
+  .methods-second-text {
+    flex-direction: column;
+    padding-bottom: 50px;
+    h3 {
+      font-size: 20px;
+    }
+    .methods-second-img-sp {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+  .methods-second-text-sp {
+    flex-direction: column-reverse;
+  }
+  .methods-age-main {
+    width: 95%;
+    font-size: $font-size-main-sp;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+  .methods-circle {
+    margin: 0;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 300px;
+    h3 {
+      font-size: 20px;
+    }
+    span {
+      font-size: 10px;
+    }
+    h4 {
+      padding-top: 30px;
+      font-size: 15px;
+    }
+    .methods-sub-title-sp {
+      padding-top: 15px;
+    }
+  }
+  .pre-golden-age,
+  .post-golden-age,
+  .independent-age {
+    margin: 30px 10px 0 10px;
+  }
+  .golden-age {
+    margin: 20px 10px 0 10px;
+  }
+  .circle-one {
+    position: relative;
+    right: 0;
+  }
+  .circle-two {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  .circle-three {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+  .circle-four {
+    position: relative;
+    bottom: 0;
+    left: 0;
   }
 }
