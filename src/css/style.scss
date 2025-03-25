@@ -707,12 +707,32 @@ footer {
 }
 .methods-first {
   width: 70%;
-  display: flex;
   margin: 0 auto;
   font-size: $font-size-main;
 }
+.methods-first-title {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.methods-first-contents {
+  display: flex;
+  padding-bottom: 30px;
+  h3 {
+    margin-right: 15px;
+    border-bottom: 3px solid $color-gold;
+    font-size: 40px;
+    font-weight: bold;
+    color: $color-gold;
+  }
+  p {
+    padding-top: 15px;
+  }
+}
 .methods-second {
-  padding-top: 200px;
+  padding-top: 80px;
   font-size: $font-size-main;
   background-image: url(../images/methods/methods_background.jpg);
   background-size: contain;
@@ -726,10 +746,6 @@ footer {
     text-align: center;
     padding-bottom: 20px;
     font-size: 30px;
-  }
-  img {
-    padding-top: 50px;
-    padding-bottom: 50px;
   }
 }
 .methods-text-detail-first {
@@ -745,12 +761,12 @@ footer {
   text-align: center;
   margin: 0 auto;
   content: "";
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   border: 3px solid $color-gold;
   border-radius: 50%;
   .methods-age {
-    margin-top: 40px;
+    margin-top: 50px;
   }
   h3 {
     font-size: 28px;
@@ -771,12 +787,9 @@ footer {
   margin: 60px 10px 0 10px;
 }
 .golden-age {
-  margin: 30px 10px 0 10px;
+  margin: 60px 10px 0 10px;
 }
 .post-golden-age {
-  margin: 40px 10px 0 10px;
-}
-.independent-age {
   margin: 40px 10px 0 10px;
 }
 .circle-one {
@@ -792,11 +805,6 @@ footer {
   position: relative;
   bottom: 200px;
   right: 20%;
-}
-.circle-four {
-  position: relative;
-  bottom: 300px;
-  left: 20%;
 }
 
 /* --------------
@@ -903,18 +911,16 @@ footer {
   /* 指導メソッド */
   .methods-first {
     width: 85%;
-    font-size: $font-size-main-sp;
+  }
+  .methods-first-title {
+    font-size: $font-size-sub;
   }
   .methods-second {
     padding-top: 50px;
-    font-size: $font-size-main-sp;
   }
   .methods-second-text {
     flex-direction: column;
     padding-bottom: 50px;
-    h3 {
-      font-size: $font-size-sub-sp;
-    }
     .methods-second-img-sp {
       display: flex;
       justify-content: center;
@@ -934,59 +940,49 @@ footer {
   .methods-text-detail-second {
     padding-left: 0;
   }
-  .methods-age-main {
-    width: 95%;
-    font-size: $font-size-main-sp;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-  }
-  .methods-circle {
-    margin: 0;
-    margin-bottom: 30px;
-    width: 300px;
-    height: 300px;
-    h3 {
-      font-size: $font-size-sub-sp;
-    }
-    span {
-      font-size: 10px;
-    }
-    h4 {
-      padding-top: 30px;
-      font-size: 15px;
-    }
-    .methods-sub-title-sp {
-      padding-top: 15px;
-    }
-  }
-  .pre-golden-age,
-  .post-golden-age,
-  .independent-age {
-    margin: 30px 10px 0 10px;
-  }
-  .golden-age {
-    margin: 20px 10px 0 10px;
-  }
-  .circle-one {
-    position: relative;
-    right: 0;
-  }
+  // .methods-age-main {
+  //   width: 95%;
+  //   font-size: $font-size-main-sp;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   padding-top: 20px;
+  // }
+  // .methods-circle {
+  //   margin: 0;
+  //   margin-bottom: 30px;
+  //   width: 300px;
+  //   height: 300px;
+  //   h3 {
+  //     font-size: $font-size-sub-sp;
+  //   }
+  //   span {
+  //     font-size: 10px;
+  //   }
+  //   h4 {
+  //     padding-top: 30px;
+  //     font-size: 15px;
+  //   }
+  //   .methods-sub-title-sp {
+  //     padding-top: 15px;
+  //   }
+  // }
+  // .pre-golden-age,
+  // .post-golden-age {
+  //   margin: 30px 10px 0 10px;
+  // }
+  // .golden-age {
+  //   margin: 20px 10px 0 10px;
+  // }
+  // .circle-one {
+  //   position: relative;
+  //   right: 0;
+  // }
   .circle-two {
-    position: relative;
-    bottom: 0;
-    left: 0;
+    bottom: 50px;
   }
   .circle-three {
-    position: relative;
-    bottom: 0;
-    right: 0;
-  }
-  .circle-four {
-    position: relative;
-    bottom: 0;
-    left: 0;
+    bottom: 100px;
   }
 }
 
@@ -1324,7 +1320,7 @@ footer {
       width: 70%;
       margin-left: 20px;
       h4 {
-        font-size: $font-size-sub-sp;
+        font-size: 18px;
       }
     }
   }
@@ -1390,6 +1386,78 @@ footer {
   }
   .title-contact {
     padding-top: 60px;
+  }
+
+  /* -------------------
+  指導メソッドページの編集
+  -------------------- */
+  /* 指導メソッド */
+  .methods-first {
+    font-size: $font-size-main-sp;
+  }
+  .methods-first-title {
+    font-size: 18px;
+  }
+  .methods-first-contents {
+    h3 {
+      font-size: 30px;
+    }
+    p {
+      padding-top: 8px;
+    }
+  }
+  .methods-second {
+    padding-top: 30px;
+    font-size: $font-size-main-sp;
+  }
+  .methods-second-text {
+    h3 {
+      font-size: $font-size-sub-sp;
+    }
+  }
+  .methods-age-main {
+    font-size: $font-size-main-sp;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+  .methods-circle {
+    margin: 0;
+    margin-bottom: 30px;
+    width: 350px;
+    height: 350px;
+    h3 {
+      font-size: $font-size-sub-sp;
+    }
+    span {
+      font-size: 10px;
+    }
+    h4 {
+      padding-top: 30px;
+      font-size: 15px;
+    }
+  }
+  .pre-golden-age,
+  .post-golden-age {
+    margin: 30px 10px 0 10px;
+  }
+  .golden-age {
+    margin: 40px 10px 0 10px;
+  }
+  .circle-one {
+    position: relative;
+    right: 0;
+  }
+  .circle-two {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  .circle-three {
+    position: relative;
+    bottom: 0;
+    right: 0;
   }
 
   /* ------------
